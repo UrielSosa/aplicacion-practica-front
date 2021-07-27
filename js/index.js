@@ -1,6 +1,6 @@
 const qs = (x) => document.querySelector(x);
 const qsa = (x) => document.querySelectorAll(x);
-const cart = localStorage.getItem('cart') || [];
+const cart = JSON.parse(localStorage.getItem('cart')) || [];
 
 
 fetch('https://rickandmortyapi.com/api/character')
